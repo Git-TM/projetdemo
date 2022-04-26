@@ -22,8 +22,7 @@
       <%= f.input :password_confirmation,
                   required: true,
                   input_html: { autocomplete: "new-password" } %>
-      <%= f.check_box :cguvalidated?,
-                  :as => :boolean,
+      <%= f.input :cguvalidated?,
                   :label => false,
                   :inline_label => true,
                   label: 'Est-ce que tu acceptes les CGUs ?'%>
