@@ -1,0 +1,15 @@
+.form {
+  width: 33%;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.form-inline {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-inline input {
+  width: 100%;
+}
