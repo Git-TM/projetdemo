@@ -1,9 +1,15 @@
-<h2>Sign up</h2>
+<h2>Créer un compte</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :firstname,
+                required: true,
+                autofocus: true %>
+    <%= f.input :lastname,
+                required: true,
+                autofocus: true %>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -15,6 +21,11 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+    <%= f.check_box :cguvalidated?,
+                :as => :boolean,
+                :label => false,
+                :inline_label => true,
+                label: 'Est-ce que tu acceptes les CGUs ?'%>
   </div>
 
   <div class="form-actions">
